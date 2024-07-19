@@ -102,7 +102,7 @@ CheckKey.MouseButton1Down:connect(function()
 	if KeyBox.Text == openkey then
 		wait(1)
 
-		loadstring(game:HttpGet("https://gist.githubusercontent.com/ago106/b2ae676c2738f6e5b1407dc649970456/raw/"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ago106/RobloxScripts/main/Hub%20Select"))()
 	end
 end)
 
