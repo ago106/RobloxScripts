@@ -1,1 +1,182 @@
+pcall(function() game.CoreGui["KeySystem"]:Destroy() end)
 
+local discord = "https://discord.gg/CjDHnCp5Ss"
+local openkey = "123"
+
+
+local KeySystem = Instance.new("ScreenGui")
+local Key = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local title_2 = Instance.new("ImageLabel")
+local KeyBox = Instance.new("TextBox")
+local CheckKey = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local GetKey = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+
+KeySystem.Name = "KeySystem"
+KeySystem.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Key.Name = "Key"
+Key.Parent = KeySystem
+Key.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Key.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Key.BorderSizePixel = 0
+Key.Position = UDim2.new(0.306, 0,0.412, 0)
+Key.Size = UDim2.new(0, 600,0, 140)
+
+bar.Name = "bar"
+bar.Parent = Key
+bar.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+bar.BackgroundTransparency = 0.800
+bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bar.BorderSizePixel = 0
+bar.Position = UDim2.new(0, 0,-0.003, 0)
+bar.Size = UDim2.new(0, 599,0, 30)
+
+Close.Name = "Close"
+Close.Parent = bar
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.966, 0,0.07, 0)
+Close.Size = UDim2.new(0, 21, 0, 25)
+Close.Font = Enum.Font.Arial
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+Close.MouseButton1Click:Connect(function()
+    KeySystem:Destroy()
+end)
+
+title.Name = "title"
+title.Parent = bar
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.33, 0,0.006, 0)
+title.Size = UDim2.new(0, 200, 0, 29)
+title.Font = Enum.Font.SourceSans
+title.Text = "RBScr1pts -  Key System"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 18.000
+
+title_2.Name = "title"
+title_2.Parent = bar
+title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_2.BackgroundTransparency = 1.000
+title_2.Position = UDim2.new(0.009, 0,0, 0)
+title_2.Size = UDim2.new(0, 25,0, 30)
+title_2.ZIndex = 14
+title_2.Image = "http://www.roblox.com/asset/?id=7641125882"
+title_2.ImageRectSize = Vector2.new(138, 167)
+
+KeyBox.Name = "Key Box"
+KeyBox.Parent = Key
+KeyBox.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+KeyBox.Position = UDim2.new(0.014, 0,0.328, 0)
+KeyBox.Size = UDim2.new(0.972, 0,0.181, 0)
+KeyBox.BorderSizePixel = 0
+KeyBox.Font = Enum.Font.SourceSansSemibold
+KeyBox.PlaceholderColor3 = Color3.fromRGB(80, 80, 80)
+KeyBox.PlaceholderText = "Key"
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.TextScaled = true
+KeyBox.TextSize = 14.000
+KeyBox.TextWrapped = true
+
+CheckKey.Name = "CheckKey"
+CheckKey.Parent = Key
+CheckKey.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+CheckKey.Position = UDim2.new(0.009, 0,0.729, 0)
+CheckKey.Size = UDim2.new(0.424, 0,0.219, 0)
+CheckKey.Font = Enum.Font.SourceSansSemibold
+CheckKey.Text = "CHECK KEY"
+CheckKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+CheckKey.TextSize = 34.000
+CheckKey.MouseButton1Down:connect(function()
+	if KeyBox.Text == openkey then
+		wait(1)
+
+		loadstring(game:HttpGet("https://gist.githubusercontent.com/ago106/b2ae676c2738f6e5b1407dc649970456/raw/"))()
+	end
+end)
+
+UICorner_3.Parent = CheckKey
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Key
+GetKey.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+GetKey.Position = UDim2.new(0.569, 0,0.729, 0)
+GetKey.Size = UDim2.new(0.417, 0,0.219, 0)
+GetKey.Font = Enum.Font.SourceSansSemibold
+GetKey.Text = "KEY LINK"
+GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.TextSize = 34.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Down:connect(function()
+	setclipboard(discord)
+	
+	game.StarterGui:SetCore("SendNotification", {Title = "key copied", Text = "the key was copied into your clipboard", Icon = "", Duration = 5})
+	game.StarterGui:SetCore("SendNotification", {
+        Title = "GetKey";
+        Text = "https://discord.gg/CjDHnCp5Ss";
+        Duration = 20.5;
+    })
+    GetKey.Text = "Link Copied"
+	GetKey.TextSize = 25.000
+    wait(3)
+    GetKey.Text = "GetKey"
+	GetKey.TextSize = 42.000
+end)
+
+UICorner_5.Parent = GetKey
+
+local function KDST_fake_script() -- Key.Dragging 
+    local script = Instance.new('LocalScript',Key)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(KDST_fake_script)()
