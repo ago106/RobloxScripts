@@ -110,7 +110,7 @@ UICorner_3.Parent = CheckKey
 
 GetKey.Name = "GetKey"
 GetKey.Parent = Key
-GetKey.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+GetKey.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
 GetKey.Position = UDim2.new(0.569, 0,0.729, 0)
 GetKey.Size = UDim2.new(0.417, 0,0.219, 0)
 GetKey.Font = Enum.Font.SourceSansSemibold
