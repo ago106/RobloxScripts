@@ -1,0 +1,204 @@
+pcall(function() game.CoreGui["HubSelect"]:Destroy() end)
+
+local HubSelect = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local title_2 = Instance.new("ImageLabel")
+local Hubs = Instance.new("Frame")
+local KriresHub = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local MouseHub = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local SynapseXgui = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Soon = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+HubSelect.Name = "HubSelect"
+HubSelect.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Menu.Name = "Menu"
+Menu.Parent = HubSelect
+Menu.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Menu.BorderSizePixel = 0
+Menu.Position = UDim2.new(0.306, 0,0.365, 0)
+Menu.Size = UDim2.new(0, 500,0, 220)
+
+bar.Name = "bar"
+bar.Parent = Menu
+bar.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+bar.BackgroundTransparency = 0.800
+bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bar.BorderSizePixel = 0
+bar.Position = UDim2.new(0, 0,-0.003, 0)
+bar.Size = UDim2.new(0, 500,0, 30)
+
+Close.Name = "Close"
+Close.Parent = bar
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.966, 0,0.07, 0)
+Close.Size = UDim2.new(0, 21, 0, 25)
+Close.Font = Enum.Font.Arial
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+Close.MouseButton1Click:Connect(function()
+    HubSelect:Destroy()
+end)
+
+title.Name = "title"
+title.Parent = bar
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.298, 0,0.022, 0)
+title.Size = UDim2.new(0, 200, 0, 30)
+title.Font = Enum.Font.SourceSans
+title.Text = "RBScr1pts"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 18.000
+
+title_2.Name = "title"
+title_2.Parent = bar
+title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_2.BackgroundTransparency = 1.000
+title_2.Position = UDim2.new(0.009, 0,0, 0)
+title_2.Size = UDim2.new(0, 25,0, 30)
+title_2.ZIndex = 14
+title_2.Image = "http://www.roblox.com/asset/?id=7641125882"
+title_2.ImageRectSize = Vector2.new(138, 167)
+
+Hubs.Name = "Hubs"
+Hubs.Parent = Menu
+Hubs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hubs.BackgroundTransparency = 1.000
+Hubs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hubs.BorderSizePixel = 0
+Hubs.Position = UDim2.new(0, 0,0, 0)
+Hubs.Size = UDim2.new(0, 100,0, 100)
+
+KriresHub.Name = "KriresHub"
+KriresHub.Parent = Hubs
+KriresHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+KriresHub.BackgroundTransparency = 0.000
+KriresHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KriresHub.BorderSizePixel = 0
+KriresHub.Position = UDim2.new(0.3, 0,0.54, 0)
+KriresHub.Size = UDim2.new(0, 200,0, 50)
+KriresHub.Font = Enum.Font.Arial
+KriresHub.Text = "Krires Hub"
+KriresHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+KriresHub.TextSize = 33.000
+KriresHub.MouseButton1Click:Connect(function()
+    wait(1)
+	print("Soon")
+end)
+
+UICorner.Parent = KriresHub
+
+MouseHub.Name = "MouseHub"
+MouseHub.Parent = Hubs
+MouseHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+MouseHub.BackgroundTransparency = 0.000
+MouseHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MouseHub.BorderSizePixel = 0
+MouseHub.Position = UDim2.new(2.7, 0,0.54, 0)
+MouseHub.Size = UDim2.new(0, 200,0, 50)
+MouseHub.Font = Enum.Font.Arial
+MouseHub.Text = "Mouse Hub"
+MouseHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseHub.TextSize = 33.000
+MouseHub.MouseButton1Click:Connect(function()
+    wait(1)
+	print("Soon")
+end)
+
+
+UICorner_2.Parent = MouseHub
+
+SynapseXgui.Name = "SynapseXgui"
+SynapseXgui.Parent = Hubs
+SynapseXgui.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+SynapseXgui.BackgroundTransparency = 0.000
+SynapseXgui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SynapseXgui.BorderSizePixel = 0
+SynapseXgui.Position = UDim2.new(0.3, 0,1.36, 0)
+SynapseXgui.Size = UDim2.new(0, 200,0, 50)
+SynapseXgui.Font = Enum.Font.Arial
+SynapseXgui.Text = "Synapse X gui"
+SynapseXgui.TextColor3 = Color3.fromRGB(255, 255, 255)
+SynapseXgui.TextSize = 33.000
+SynapseXgui.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/ago106/b0dcfd39deddd31c9b4370ff8a8d51af/raw/"))()
+end)
+
+UICorner_3.Parent = SynapseXgui
+
+Soon.Name = "Soon"
+Soon.Parent = Hubs
+Soon.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Soon.BackgroundTransparency = 0.000
+Soon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Soon.BorderSizePixel = 0
+Soon.Position = UDim2.new(2.7, 0,1.36, 0)
+Soon.Size = UDim2.new(0, 200,0, 50)
+Soon.Font = Enum.Font.Arial
+Soon.Text = "Soon"
+Soon.TextColor3 = Color3.fromRGB(255, 255, 255)
+Soon.TextSize = 33.000
+Soon.MouseButton1Click:Connect(function()
+    wait(1)
+	print("Soon")
+end)
+
+UICorner_4.Parent = Soon
+
+local function MDST_fake_script() -- Menu.Dragging 
+    local script = Instance.new('LocalScript',Menu)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(MDST_fake_script)()
